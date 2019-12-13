@@ -3,7 +3,7 @@ package management
 import (
 	"testing"
 
-	"gopkg.in/auth0.v2"
+	"github.com/dexorcist/auth0"
 )
 
 func TestLog(t *testing.T) {

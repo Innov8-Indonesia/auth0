@@ -1,6 +1,6 @@
 package management
 
-import "gopkg.in/auth0.v2"
+import "github.com/dexorcist/auth0"
 
 type RuleConfig struct {
 
