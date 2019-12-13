@@ -25,6 +25,39 @@ func TestResourceServer(t *testing.T) {
 		},
 	}
 
+	arr := []*ResourceServer{
+		{
+			Name:             auth0.Stringf("Test Resource Server (%s)", time.Now().Format(time.StampMilli)),
+			Identifier:       auth0.String("https://api.example.com/"),
+			SigningAlgorithm: auth0.String("HS256"),
+
+			TokenLifetime:       auth0.Int(7200),
+			TokenLifetimeForWeb: auth0.Int(3600),
+
+			Scopes: []*ResourceServerScope{
+				{
+					Value:       auth0.String("create:resource"),
+					Description: auth0.String("Create Resource"),
+				},
+			},
+		},
+		{
+			Name:             auth0.Stringf("Test Resource Server (%s)", time.Now().Format(time.StampMilli)),
+			Identifier:       auth0.String("https://api.example.com/"),
+			SigningAlgorithm: auth0.String("HS256"),
+
+			TokenLifetime:       auth0.Int(7200),
+			TokenLifetimeForWeb: auth0.Int(3600),
+
+			Scopes: []*ResourceServerScope{
+				{
+					Value:       auth0.String("create:resource"),
+					Description: auth0.String("Create Resource"),
+				},
+			},
+		},
+	}
+
 	var err error
 
 	t.Run("Create", func(t *testing.T) {
@@ -74,5 +107,13 @@ func TestResourceServer(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
+	})
+
+	t.Run("List", func(t *testing.T) {
+		arr, err = m.ResourceServer.List()
+		if err != nil {
+			t.Fatal(err)
+		}
+		t.Logf("%v\n", arr)
 	})
 }

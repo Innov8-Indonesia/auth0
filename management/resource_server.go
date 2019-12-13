@@ -99,3 +99,12 @@ func (r *ResourceServerManager) Update(id string, rs *ResourceServer) (err error
 func (r *ResourceServerManager) Delete(id string) (err error) {
 	return r.m.delete(r.m.uri("resource-servers", id))
 }
+
+// Get all resource server
+//
+// See: https://auth0.com/docs/api/management/v2#!/Resource_Servers/get_resource_servers
+func (r *ResourceServerManager) List(opts ...reqOption) ([]*ResourceServer, error) {
+	var rs []*ResourceServer
+	err := r.m.get(r.m.uri("resource-servers")+r.m.q(opts), &rs)
+	return rs, err
+}
