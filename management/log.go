@@ -3,7 +3,7 @@ package management
 import (
 	"time"
 
-	"github.com/dexorcist/auth0"
+	"github.com/Innov8-Indonesia/auth0"
 )
 
 var logTypeName = map[string]string{
