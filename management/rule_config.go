@@ -1,6 +1,6 @@
 package management
 
-import "github.com/dexorcist/auth0"
+import "github.com/Innov8-Indonesia/auth0"
 
 type RuleConfig struct {
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/dexorcist/auth0"
-	"github.com/dexorcist/auth0/management"
+	"github.com/Innov8-Indonesia/auth0"
+	"github.com/Innov8-Indonesia/auth0/management"
 )
 
 var (

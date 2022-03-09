@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dexorcist/auth0"
+	"github.com/Innov8-Indonesia/auth0"
 )
 
 func TestConnection(t *testing.T) {

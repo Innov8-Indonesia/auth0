@@ -3,7 +3,7 @@ package management
 import (
 	"testing"
 
-	"github.com/dexorcist/auth0"
+	"github.com/Innov8-Indonesia/auth0"
 )
 
 func TestJob(t *testing.T) {
