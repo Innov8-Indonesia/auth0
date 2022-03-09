@@ -1,8 +1,9 @@
 package management
 
 import (
-	"gopkg.in/auth0.v1"
 	"testing"
+
+	"github.com/dexorcist/auth0"
 )
 
 func TestBranding(t *testing.T) {
