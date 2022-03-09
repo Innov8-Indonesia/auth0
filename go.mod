@@ -1,4 +1,4 @@
-module github.com/dexorcist/auth0
+module github.com/Innov8-Indonesia/auth0
 
 go 1.12
 
